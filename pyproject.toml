@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "desafio-brickup"
+version = "0.1.0"
+description = "desafio de nivelamento para a Brickup"
+authors = ["Vitor Rossini <rossinivitor@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "desafio_brickup"}]
+
+[tool.poetry.dependencies]
+python = "^3.8.0"
+tabula-py = "^2.7.0"
+peewee = "^3.16.2"
+fastapi = "^0.95.1"
+uvicorn = "^0.21.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
