@@ -12,8 +12,12 @@ class ItemBase(BaseModel):
 class ItemCreate(ItemBase):
     pass
 
+
 class ItemResponse(ItemBase):
-    id:int
+
+    class Config:
+        orm_mode = True
+        getter_dict = PeeweeGetterDict
 
 class Item(ItemBase):
     id: int

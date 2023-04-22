@@ -13,5 +13,3 @@ def create_user(user: UserCreate):
     db_user.save()
     return db_user
 
-def get_files_from_user(user_id: int):
-    return list(models.User.filter(models.User.id == user_id).items)

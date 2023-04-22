@@ -15,6 +15,10 @@ class UserCreate(UserBase):
 class UserResponse(UserBase):
     id: int
 
+    class Config:
+        orm_mode = True
+        getter_dict = PeeweeGetterDict
+
 class User(UserBase):
     id: int
     files: List[PDFFile]

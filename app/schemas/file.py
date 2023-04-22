@@ -12,7 +12,11 @@ class PDFFileCreate(PDFFileBase):
 
 class PDFFileResponse(PDFFileBase):
     id: int
-    user_id: int
+
+    class Config:
+        orm_mode = True
+        getter_dict = PeeweeGetterDict
+
 
 class PDFFile(PDFFileBase):
     id: int
