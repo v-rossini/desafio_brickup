@@ -1,9 +1,7 @@
-from fastapi import FastAPI, Depends, HTTPException
-from typing import List
-from schemas  import user, item, file
-from database.dbConnection import start_db, get_db
-from repositories import userRepository, fileRepository, itemRepository
-from database import models
+from fastapi import FastAPI
+
+from database.dbConnection import start_db
+
 from router import userRouter, fileRouter, itemRouter
 
 start_db()
