@@ -12,6 +12,9 @@ class UserBase(BaseModel):
 class UserCreate(UserBase):
     password: str
 
+class UserAuth(UserBase):
+    password: str
+
 class UserResponse(UserBase):
     id: int
 

@@ -2,11 +2,12 @@ from fastapi import FastAPI
 
 from database.dbConnection import start_db
 
-from router import userRouter, fileRouter, itemRouter
+from router import userRouter, fileRouter, itemRouter, authRouter
 
 start_db()
 
 app = FastAPI()
+app.include_router(authRouter.router)
 app.include_router(userRouter.router) 
 app.include_router(fileRouter.router) 
 app.include_router(itemRouter.router)
