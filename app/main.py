@@ -1,7 +1,10 @@
 from fastapi import FastAPI
-from models.user import User
-from models.item import Item
+from schemas.user import User
+from schemas.item import Item
+from schemas.file import PDFFile
+from database.dbConnection import start_db
 
+start_db()
 
 app = FastAPI()
 
@@ -15,4 +18,8 @@ def create_user(body: User):
 
 @app.post("/item")
 def create_user(body: Item):
+    return "bla"
+
+@app.post("/file")
+def create_user(body: PDFFile):
     return "bla"
