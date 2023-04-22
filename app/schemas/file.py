@@ -4,10 +4,17 @@ from typing import List
 from .getterDict import PeeweeGetterDict
 from .item import Item
 
-class PDFFIleBase(BaseModel):
+class PDFFileBase(BaseModel):
     filename: str
 
-class PDFFile(PDFFIleBase):
+class PDFFileCreate(PDFFileBase):
+    pass
+
+class PDFFileResponse(PDFFileBase):
+    id: int
+    user_id: int
+
+class PDFFile(PDFFileBase):
     id: int
     user_id: int
     items: List[Item]

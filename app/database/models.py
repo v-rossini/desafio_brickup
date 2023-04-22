@@ -13,17 +13,17 @@ class DatabaseModel(Model):
 
 class User(DatabaseModel):
     username = CharField(unique=True)
-    password = CharField()
+    hashed_password = CharField()
 
 class PDFFile(DatabaseModel):
     filename = CharField() 
     user = ForeignKeyField(User, backref="files")
 
 class Item(DatabaseModel):
-    item = IntegerField(primary_key=True)
-    description = CharField()
-    unity = CharField()
-    quantity = IntegerField()
+    item = IntegerField()
+    description = CharField(null = True)
+    unit = CharField(null = True)
+    amount = IntegerField(null = True)
     file = ForeignKeyField(PDFFile, backref="items")
 
 

@@ -9,6 +9,12 @@ class ItemBase(BaseModel):
     unit: Optional[str] = None
     amount: Optional[int] = None
 
+class ItemCreate(ItemBase):
+    pass
+
+class ItemResponse(ItemBase):
+    id:int
+
 class Item(ItemBase):
     id: int
     file_id: int
