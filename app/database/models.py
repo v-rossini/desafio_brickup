@@ -1,5 +1,5 @@
 from peewee import (Model, DateTimeField, ForeignKeyField,
-                    CharField, IntegerField, UUIDField)
+                    CharField, IntegerField)
 from datetime import datetime
 from .database import db
 
