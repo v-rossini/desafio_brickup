@@ -2,10 +2,10 @@
 
 O projeto foi criado usando o Poetry para realizar o gerenciamento de dependencias.
 
-## Para instalar:
+## Para instalar o poetry:
 * pip install poetry
 
-## para definir a pasta padrão da pasta .env para o diretório do projeto:
+## para definir o diretório do projeto como padrão para a pasta .env para :
 * poetry config virtualenvs.in-project true
 
 ## Para criar o ambiente virtual e instalar dependências:
