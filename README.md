@@ -19,3 +19,4 @@ O projeto foi criado usando o Poetry para realizar o gerenciamento de dependenci
 * uvicorn main:app --reload
 
 --------------------------
+o projeto irá rodar na porta localhost:8000 (documentação da API em localhost:8000/docs)
